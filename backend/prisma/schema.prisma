@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mysql"
+    url      = env("DATABASE_URL")
+}
+
+model user {
+    id        Int      @id @default(autoincrement())
+    name      String
+    email     String   @unique
+    password  String
+    createdAt DateTime @default(now())
+    todo      todo[]
+    folder    folder[]
+}
+
+model todo {
+    id        Int      @id @default(autoincrement())
+    title     String
+    completed Boolean? @default(false)
+    folderId  Int?
+    userId    Int?
+    createdAt DateTime @default(now())
+
+    user   user?   @relation(fields: [userId], references: [id])
+    folder folder? @relation(fields: [folderId], references: [id], onDelete: Cascade)
+}
+
+model folder {
+    id        Int      @id @default(autoincrement())
+    name      String
+    createdAt DateTime @default(now())
+    userId    Int?
+
+    user  user?  @relation(fields: [userId], references: [id])
+    todos todo[]
+}

@@ -1,0 +1,49 @@
+
+> frontend@0.1.0 start
+> react-scripts start
+
+Something is already running on port 3000.
+
+> frontend@0.1.0 start
+> react-scripts start
+
+(node:20306) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:20306) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://172.19.247.199:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+asset static/js/bundle.js 1.43 MiB [emitted] (name: main) 1 related asset
+asset index.html 1.67 KiB [emitted]
+asset asset-manifest.json 190 bytes [emitted]
+runtime modules 28.1 KiB 13 modules
+modules by path ./node_modules/ 1.33 MiB
+  modules by path ./node_modules/core-js-pure/ 24.8 KiB 53 modules
+  modules by path ./node_modules/webpack-dev-server/client/ 62.1 KiB 12 modules
+  modules by path ./node_modules/webpack/hot/*.js 4.4 KiB 4 modules
+  modules by path ./node_modules/react/ 119 KiB 4 modules
+  modules by path ./node_modules/html-entities/lib/*.js 115 KiB 4 modules
+  modules by path ./node_modules/scheduler/ 29.4 KiB 4 modules
+  modules by path ./node_modules/@pmmmwh/react-refresh-webpack-plugin/ 9.01 KiB 2 modules
+  modules by path ./node_modules/react-refresh/ 24.1 KiB 2 modules
+  modules by path ./node_modules/react-dom/ 959 KiB 2 modules
+  + 3 modules
+modules by path ./src/*.js 2.93 KiB
+  ./src/index.js 1.53 KiB [built] [code generated]
+  ./src/App.js 1.4 KiB [built] [code generated]
+webpack 5.70.0 compiled successfully in 4854 ms
+
+> frontend@0.1.0 start
+> react-scripts start
+
+Something is already running on port 3000.
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.

@@ -1,0 +1,3 @@
+GET {{SERVER_URL}}/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0NzUzMTcwMiwiZXhwIjoxNjQ3NjE4MTAyfQ.klSZs3lqHW9svsD8AetRJcmzMo4QKTY3HiwjJlZK0V8
+

@@ -1,0 +1,25 @@
+GET {{SERVER_URL}}/folders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0NzUyNTkwNCwiZXhwIjoxNjQ3NjEyMzA0fQ.Qu-r6bFeAPud8i32bPf98Sxcks0kvotG55Ui0KaIF24
+
+GET {{SERVER_URL}}/folders/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0NzUyNTkwNCwiZXhwIjoxNjQ3NjEyMzA0fQ.Qu-r6bFeAPud8i32bPf98Sxcks0kvotG55Ui0KaIF24
+
+POST {{SERVER_URL}}/folders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0NzUyNTkwNCwiZXhwIjoxNjQ3NjEyMzA0fQ.Qu-r6bFeAPud8i32bPf98Sxcks0kvotG55Ui0KaIF24
+Content-Type: application/json
+
+{
+    "name": "Work"
+}
+
+PUT {{SERVER_URL}}/folders/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0NzUyNTkwNCwiZXhwIjoxNjQ3NjEyMzA0fQ.Qu-r6bFeAPud8i32bPf98Sxcks0kvotG55Ui0KaIF24
+Content-Type: application/json
+
+{
+    "name": "Work"
+}
+
+DELETE {{SERVER_URL}}/folders/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0NzUyNTkwNCwiZXhwIjoxNjQ3NjEyMzA0fQ.Qu-r6bFeAPud8i32bPf98Sxcks0kvotG55Ui0KaIF24
+
