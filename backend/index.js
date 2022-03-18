@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const path = require('path');
+const cors = require('cors');
 
 const auth_routes = require('./routes/auth');
 const user_routes = require('./routes/users');
@@ -15,6 +16,7 @@ const isAuthenticated = require('./middlewares/isAuthenticated');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join('frontend', 'build')));
+app.use(cors());
 
 //routes
 app.use('/auth', auth_routes);

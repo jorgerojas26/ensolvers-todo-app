@@ -5,7 +5,7 @@ const getFolders = async (req, res) => {
     try {
         const folders = await prisma.folder.findMany({ where: { userId: req.user.id } });
 
-        res.status(200).json({ folders });
+        res.status(200).json(folders ?? []);
     } catch (error) {
         console.log(error);
         res.status(500).json({ error: error.message });
@@ -40,7 +40,7 @@ const createFolder = async (req, res) => {
             },
         });
 
-        res.status(201).json({ folder });
+        res.status(201).json(folder);
     } catch (error) {
         console.log(error);
         res.status(500).json({ error: error.message });
@@ -75,7 +75,7 @@ const deleteFolder = async (req, res) => {
 
         await prisma.folder.delete({ where: { id: Number(id) } });
 
-        res.status(200).json({ message: 'Folder deleted' });
+        res.status(200).json({ success: true });
     } catch (error) {
         console.log(error);
         res.status(500).json({ error: error.message });

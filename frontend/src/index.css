@@ -1,0 +1,31 @@
+html,body,#root {
+    height: 100%;
+    margin: 0;
+    background: #f8f8f8;
+}
+
+body {
+    font-family: 'Montserrat', Helvetica, Arial, serif;
+}
+
+textarea:focus, input:focus, a:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+}
+
+ul, li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-item:hover {
+    transition: all .2s;
+    transform: translateY(-4px);
+    box-shadow: 0 3px 10px 0 #ebe9f1;
+    z-index: 1;
+}

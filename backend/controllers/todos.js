@@ -2,11 +2,15 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 const getTodos = async (req, res) => {
+    const { folderId } = req.query;
+
     try {
         const todos = await prisma.todo.findMany({
-            where: { userId: req.user.id },
+            where: { userId: req.user.id, ...(folderId && { folderId: Number(folderId) }) },
+            orderBy: { createdAt: 'desc' },
+            include: { folder: true },
         });
-        res.status(200).json(todos);
+        res.status(200).json(todos ?? []);
     } catch (error) {
         console.log(error);
         res.status(500).json({ message: error.message });
@@ -19,6 +23,7 @@ const getTodo = async (req, res) => {
     try {
         const todo = await prisma.todo.findUnique({
             where: { id: Number(id) },
+            include: { folder: true },
         });
 
         if (!todo) return res.status(404).json({ message: 'Todo not found' });
@@ -37,7 +42,7 @@ const createTodo = async (req, res) => {
         const todo = await prisma.todo.create({
             data: {
                 title,
-                ...(folderId && { folderId: Number(folderId) }),
+                ...(folderId && { folder: { connect: { id: Number(folderId) } } }),
                 user: { connect: { id: req.user.id } },
             },
         });
@@ -50,15 +55,26 @@ const createTodo = async (req, res) => {
 
 const updateTodo = async (req, res) => {
     const { id } = req.params;
-    const { title, folderId } = req.body;
+    const { title, completed, folderId } = req.body;
 
     try {
+        const databaseTodo = await prisma.todo.findUnique({
+            where: { id: Number(id) },
+            include: { folder: true },
+        });
+
+        if (!databaseTodo) return res.status(404).json({ message: 'Todo not found' });
+
         const todo = await prisma.todo.update({
             where: { id: Number(id) },
             data: {
                 title,
-                folderId: Number(folderId),
+                completed: Boolean(completed),
+                ...((folderId !== undefined && { folder: { connect: { id: Number(folderId) } } }) || {
+                    folderId: null,
+                }),
             },
+            include: { folder: true },
         });
         res.status(200).json(todo);
     } catch (error) {
@@ -74,7 +90,7 @@ const deleteTodo = async (req, res) => {
         await prisma.todo.delete({
             where: { id: Number(id) },
         });
-        res.status(204).json();
+        res.status(200).json({ success: true });
     } catch (error) {
         console.log(error);
         res.status(500).json({ message: error.message });

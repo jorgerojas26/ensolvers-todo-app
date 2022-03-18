@@ -22,13 +22,11 @@ const signIn = async (req, res) => {
     const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, { expiresIn: '24h' });
 
     return res.status(200).json({
-        data: {
-            token,
-            user: {
-                id: user.id,
-                name: user.name,
-                email: user.email,
-            },
+        token,
+        user: {
+            id: user.id,
+            name: user.name,
+            email: user.email,
         },
     });
 };
@@ -51,13 +49,11 @@ const register = async (req, res) => {
     const token = jwt.sign({ userId: newUser.id }, process.env.JWT_SECRET, { expiresIn: '24h' });
 
     return res.status(201).json({
-        data: {
-            token,
-            user: {
-                id: newUser.id,
-                name: newUser.name,
-                email: newUser.email,
-            },
+        token,
+        user: {
+            id: newUser.id,
+            name: newUser.name,
+            email: newUser.email,
         },
     });
 };

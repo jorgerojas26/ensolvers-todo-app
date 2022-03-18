@@ -1,3 +1,6 @@
 GET {{SERVER_URL}}/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0NzUzMTcwMiwiZXhwIjoxNjQ3NjE4MTAyfQ.klSZs3lqHW9svsD8AetRJcmzMo4QKTY3HiwjJlZK0V8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTY0NzY0NzIyMCwiZXhwIjoxNjQ3NzMzNjIwfQ.IJCvvDi-cB_AsEBtvODSBTE4qvsGv_Vr7ZFehb-6b38
+
+DELETE {{SERVER_URL}}/users/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTY0NzY0NzIyMCwiZXhwIjoxNjQ3NzMzNjIwfQ.IJCvvDi-cB_AsEBtvODSBTE4qvsGv_Vr7ZFehb-6b38
 

@@ -1,15 +1,15 @@
 GET {{SERVER_URL}}/folders
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0NzUyNTkwNCwiZXhwIjoxNjQ3NjEyMzA0fQ.Qu-r6bFeAPud8i32bPf98Sxcks0kvotG55Ui0KaIF24
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0NzYyMzE1NywiZXhwIjoxNjQ3NzA5NTU3fQ.v5emc5r04OOwD5Xutna0pnNPg5UAb0hSbjwFfRg8lws
 
 GET {{SERVER_URL}}/folders/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0NzUyNTkwNCwiZXhwIjoxNjQ3NjEyMzA0fQ.Qu-r6bFeAPud8i32bPf98Sxcks0kvotG55Ui0KaIF24
 
 POST {{SERVER_URL}}/folders
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0NzUyNTkwNCwiZXhwIjoxNjQ3NjEyMzA0fQ.Qu-r6bFeAPud8i32bPf98Sxcks0kvotG55Ui0KaIF24
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0NzYyMzE1NywiZXhwIjoxNjQ3NzA5NTU3fQ.v5emc5r04OOwD5Xutna0pnNPg5UAb0hSbjwFfRg8lws
 Content-Type: application/json
 
 {
-    "name": "Work"
+    "name": "Personal"
 }
 
 PUT {{SERVER_URL}}/folders/1

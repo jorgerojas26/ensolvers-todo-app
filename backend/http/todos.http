@@ -1,15 +1,16 @@
 GET {{SERVER_URL}}/todos
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0NzUyNTkwNCwiZXhwIjoxNjQ3NjEyMzA0fQ.Qu-r6bFeAPud8i32bPf98Sxcks0kvotG55Ui0KaIF24
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0NzYyNzAwMiwiZXhwIjoxNjQ3NzEzNDAyfQ.A74Df1xFiNxw2pUdCSCCYXA34ATiIHKVa5IeGohTiak
 
 GET {{SERVER_URL}}/todos/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0NzUyNTkwNCwiZXhwIjoxNjQ3NjEyMzA0fQ.Qu-r6bFeAPud8i32bPf98Sxcks0kvotG55Ui0KaIF24
 
 POST {{SERVER_URL}}/todos
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0NzUyNTkwNCwiZXhwIjoxNjQ3NjEyMzA0fQ.Qu-r6bFeAPud8i32bPf98Sxcks0kvotG55Ui0KaIF24
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0NzYyNzAwMiwiZXhwIjoxNjQ3NzEzNDAyfQ.A74Df1xFiNxw2pUdCSCCYXA34ATiIHKVa5IeGohTiak
 Content-Type: application/json
 
 {
-    "title": "Going to the gym"
+    "title": "Finish the API",
+    "folderId": 1
 }
 
 PUT {{SERVER_URL}}/todos/1
