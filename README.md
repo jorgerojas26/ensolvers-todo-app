@@ -25,10 +25,11 @@ Todo app exercise for www.ensolvers.com job application.
 
 # Development
 
-- Change REACT_APP_SERVER_URL variable to http://localhost:PORT on the .env file.
-- Execute:
-    npm run dev
-- Enjoy!
+- Make sure you have all runtimes installed.
+- Change frontend REACT_APP_SERVER_URL .env variable to http://localhost:5000
+- Change backend .env.example name to .env and fill all corresponding fields
+- Run npm start
+
 
 It will automatically install all dependencies of both frontend and backend app and run them
 
