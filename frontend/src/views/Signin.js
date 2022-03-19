@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Card, CardBody, CardHeader, Container, Form, Label, Input } from 'reactstrap';
+import { Card, CardBody, CardHeader, Container, Form, Label, Input, Col } from 'reactstrap';
 import Button from '../components/Button';
 
 import { signin } from '../services/auth';
@@ -39,27 +39,29 @@ const Signin = () => {
     return (
         <Container className='h-100'>
             <div style={{ display: 'grid', placeItems: 'center' }} className='h-100 '>
-                <Card style={{ width: 400 }}>
-                    <CardHeader className='text-center'>Signin</CardHeader>
-                    <CardBody>
-                        <Form onSubmit={handleSubmit}>
-                            <Label>Email</Label>
-                            <Input type='email' name='email' value={email} onChange={handleChange} required />
-                            <Label>Password</Label>
-                            <Input type='password' name='password' onChange={handleChange} required />
+                <Col xs='12' sm='8' lg='4'>
+                    <Card>
+                        <CardHeader className='text-center'>Signin</CardHeader>
+                        <CardBody>
+                            <Form onSubmit={handleSubmit}>
+                                <Label>Email</Label>
+                                <Input type='email' name='email' value={email} onChange={handleChange} required />
+                                <Label>Password</Label>
+                                <Input type='password' name='password' onChange={handleChange} required />
 
-                            {error && <p className='text-danger'>{error}</p>}
-                            <Button type='submit' className='mt-3' color='primary' block loading={loading}>
-                                Signin
-                            </Button>
-                            <div className='mt-2'>
-                                <p>
-                                    Don't have an account? <Link to='/signup'>Signup</Link>
-                                </p>
-                            </div>
-                        </Form>
-                    </CardBody>
-                </Card>
+                                {error && <p className='text-danger'>{error}</p>}
+                                <Button type='submit' className='mt-3' color='primary' block loading={loading}>
+                                    Signin
+                                </Button>
+                                <div className='mt-2'>
+                                    <p>
+                                        Don't have an account? <Link to='/signup'>Signup</Link>
+                                    </p>
+                                </div>
+                            </Form>
+                        </CardBody>
+                    </Card>
+                </Col>
             </div>
         </Container>
     );
