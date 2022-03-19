@@ -22,3 +22,21 @@ Todo app exercise for www.ensolvers.com job application.
 
 - Email: ensolvers@ensolvers.com
 - Password: ensolvers
+
+# Development
+
+- Change REACT_APP_SERVER_URL variable to http://localhost:<PORT> on the .env file.
+- Execute:
+    npm run dev
+- Enjoy!
+
+It will automatically install all dependencies of both frontend and backend app and run them
+
+
+# Production
+
+- The frontend app has been published to Github Pages at: https://jorgerojas26.github.io/ensolvers-todo-app/
+
+- The backend app has been published to heroku at: https://ensolvers-todo-app-api.herokuapp.com/
+
+
