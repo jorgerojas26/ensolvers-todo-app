@@ -25,7 +25,7 @@ Todo app exercise for www.ensolvers.com job application.
 
 # Development
 
-- Change REACT_APP_SERVER_URL variable to http://localhost:<PORT> on the .env file.
+- Change REACT_APP_SERVER_URL variable to http://localhost:PORT on the .env file.
 - Execute:
     npm run dev
 - Enjoy!
