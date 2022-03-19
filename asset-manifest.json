@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ensolvers-todo-app/static/css/main.74e5fc33.css",
-    "main.js": "/ensolvers-todo-app/static/js/main.f12893e9.js",
+    "main.js": "/ensolvers-todo-app/static/js/main.9ff98ca9.js",
     "index.html": "/ensolvers-todo-app/index.html",
     "main.74e5fc33.css.map": "/ensolvers-todo-app/static/css/main.74e5fc33.css.map",
-    "main.f12893e9.js.map": "/ensolvers-todo-app/static/js/main.f12893e9.js.map"
+    "main.9ff98ca9.js.map": "/ensolvers-todo-app/static/js/main.9ff98ca9.js.map"
   },
   "entrypoints": [
     "static/css/main.74e5fc33.css",
-    "static/js/main.f12893e9.js"
+    "static/js/main.9ff98ca9.js"
   ]
 }
