@@ -38,6 +38,6 @@ It will automatically install all dependencies of both frontend and backend app 
 
 - The frontend app has been published to Github Pages at: https://jorgerojas26.github.io/ensolvers-todo-app/
 
-- The backend app has been published to heroku at: https://ensolvers-todo-app-api.herokuapp.com/
+- The backend app has been published to heroku at: https://electric-collar-production.up.railway.app/
 
 
